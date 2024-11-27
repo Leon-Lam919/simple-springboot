@@ -38,10 +38,11 @@ file structure:
             └───example
                 └───simple_spingboot
 
-[x] created end point 
-[x] change ports
-[x] add new endpoints
-[ ] connect to DB
+- [x] created end point 
+- [x] change ports
+- [x] add new endpoints
+- [x] connect to DB
+# Things to learn
 - learn/explain what @SpringBootApplication is
 - learn/explain what @RestController
 - learn/explain what @GetMapping

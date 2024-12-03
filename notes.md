@@ -49,3 +49,11 @@ file structure:
     - Maps the file path for HTTP request
     - ex: "/" is the home path
     - ex: "home" maps to the "home" page of the website and etc...
+
+#Creating simple chat backend
+1. add dependencies
+2. Enable websocket configuration
+3. Create WebSocket Handler
+4. Define Endpoint Mapping
+5. Test websocket
+6. profit?

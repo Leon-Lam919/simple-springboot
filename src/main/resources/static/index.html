@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Chat</title>
+</head>
+<body>
+    <h1>WebSocket Chat Application</h1>
+
+    <script src="/js/stomp.js"></script>
+    <script>
+        var socket = new SockJS('/ws');
+        var stompClient = Stomp.over(socket);
+
+        stompClient.connect({}, function (frame) {
+            console.log('Connected: ' + frame);
+            
+            // Subscribe to topic
+            stompClient.subscribe('/topic/greeting', function (message) {
+                console.log('Message Received: ' + JSON.parse(message.body).content);
+            });
+
+            // Send a message
+            stompClient.send('/hello', {}, JSON.stringify({'content': 'Hello, WebSocket!'}));
+        });
+    </script>
+</body>
+</html>
+

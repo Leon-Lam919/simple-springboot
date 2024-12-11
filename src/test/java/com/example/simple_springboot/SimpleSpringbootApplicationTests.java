@@ -1,4 +1,4 @@
-package com.example.simple_spingboot;
+package com.example.simple_springboot;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -7,7 +7,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 class SimpleSpringbootApplicationTests {
 
 	@Test
-	void contextLoads() {
-	}
+	void contextLoads() {}
 
 }

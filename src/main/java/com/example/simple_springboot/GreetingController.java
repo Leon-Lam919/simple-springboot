@@ -2,6 +2,7 @@ package com.example.simple_springboot;
 
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
+import org.springframework.web.socket.config.annotation.StompEndpointRegistry;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.util.HtmlUtils;
 
@@ -14,4 +15,5 @@ public class GreetingController {
 		Thread.sleep(1000);
 		return new Greeting("Hello, " + HtmlUtils.htmlEscape(message.getName()) + "!");
 	}
+
 }

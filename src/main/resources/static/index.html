@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebSocket Test</title>
+    <script src="https://cdn.jsdelivr.net/npm/sockjs-client/dist/sockjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/stompjs/lib/stomp.min.js"></script>
+</head>
+<body>
+    <h1>WebSocket Test</h1>
+    <button onclick="sendMessage()">Send Message</button>
+    <div id="messages"></div>
+
+    <script>
+        var socket = new SockJS('/ws');
+        var stompClient = Stomp.over(socket);
+
+        stompClient.connect({}, function (frame) {
+            console.log('Connected: ' + frame);
+
+            // Subscribe to topic
+            stompClient.subscribe('/topic/greeting', function (message) {
+                const body = JSON.parse(message.body);
+                const msgDiv = document.getElementById('messages');
+                msgDiv.innerHTML += `<p>Message received: ${body.content}</p>`;
+            });
+        });
+
+        function sendMessage() {
+            stompClient.send('/app/hello', {}, JSON.stringify({ content: 'Test Message' }));
+        }
+    </script>
+</body>
+</html>
+

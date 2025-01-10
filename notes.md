@@ -57,3 +57,18 @@ file structure:
 4. Define Endpoint Mapping
 5. Test websocket
 6. profit?
+
+MVP:
+- Have a working backend
+    - Create each endpoint for the frontend to connect to:
+        - General chat (broadcast messages to everyone in the room)
+        - Private messages (DMs to people, one on one)
+        - Group chats
+            - select members to join and start chatting
+- Have a presentable frontend
+    - login page
+    - chatrooms on left hand side
+    - list of friends in contact with on top
+    - list of group chats in seperate tab?
+
+

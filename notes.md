@@ -61,7 +61,7 @@ file structure:
 MVP:
 - Have a working backend
     - Create each endpoint for the frontend to connect to:
-        - General chat (broadcast messages to everyone in the room)
+        - General chat (broadcast messages to everyone in the room) --> GenChat branch
         - Private messages (DMs to people, one on one)
         - Group chats
             - select members to join and start chatting

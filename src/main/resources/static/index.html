@@ -13,6 +13,7 @@
 <button onclick="sendMessage()">Send Message</button>
 <div id="messages" style="border: 2px solid black; padding: 10px; margin: 10px;"></div>
 
+<!-- TODO: add global chat messaging feat-->
 <script>
     var socket = new SockJS('/ws');
     var stompClient = Stomp.over(socket);

@@ -11,7 +11,7 @@
 <h1>WebSocket Test</h1>
 <input type="text" id="fname" name="fname">
 <button onclick="sendMessage()">Send Message</button>
-<div id="messages"></div>
+<div id="messages" style="border: 2px solid black; padding: 10px; margin: 10px;"></div>
 
 <script>
     var socket = new SockJS('/ws');
@@ -26,7 +26,7 @@
             const body = JSON.parse(message.body);
             const msgDiv = document.getElementById('messages'); // Use correct div for output
             console.log("Message received: ", body.content);
-            msgDiv.innerHTML += `<p>Message received: ${body.content}</p>`;
+            msgDiv.innerHTML += `<p style="padding: 3px; margin: 5px;">Message received: ${body.content}</p>`;
         });
     });
 
@@ -35,7 +35,7 @@
         const messageContent = inputField.value.trim(); // Get input value and trim spaces
 
         if (messageContent) {
-            stompClient.send('/app/hello', {}, JSON.stringify({content: messageContent}));
+            stompClient.send('/app/hello', {}, JSON.stringify({name: messageContent}));
             inputField.value = ""; // Clear input after sending
         } else {
             console.log("Cannot send an empty message");

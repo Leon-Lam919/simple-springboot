@@ -9,7 +9,7 @@ public class GlobalChatController {
 	@SendTo("/topic/global")
 	@MessageMapping("/send")
 
-	public Global_chat broadcastMsgGlobal(Global_chat globalMSG) {
+	public Global_chat broadcastMsgGlobal(Global_chat globalMSG, Global_chat name) {
 		return globalMSG;
 	}
 }

@@ -13,6 +13,10 @@
 <button onclick="sendMessage()">Send Message</button>
 <div id="messages" style="border: 2px solid black; padding: 10px; margin: 10px;"></div>
 
+<input type="text" id="global" name="global">
+<button onclick="sendMessage()">Send msg to gen</button>
+
+
 <!-- TODO: add global chat messaging feat-->
 <script>
     var socket = new SockJS('/ws');
@@ -29,6 +33,15 @@
             console.log("Message received: ", body.content);
             msgDiv.innerHTML += `<p style="padding: 3px; margin: 5px;">Message received: ${body.content}</p>`;
         });
+
+        // subscribe to global messaging
+        stompClient.subscribe('/topic/global', function (global) {
+            const body = JSON.parse(global.body);
+            const globaldiv = document.getElementById('messages');
+            console.log("Message received: ", body.content);
+            msgDiv.innerHTML += `<p style="padding: 3px; margin: 5px;">Message received: ${body.content}</p>`;
+
+        });
     });
 
     function sendMessage() {
@@ -41,6 +54,20 @@
         } else {
             console.log("Cannot send an empty message");
         }
+    }
+
+    <!--FIX: Msg sends, but there is no return from backend-->
+    function sendGlobalMsg() {
+        const inputField = document.getElementById('global');
+        const messageContent = inputField.value.trim(); // Get input value and trim spaces
+
+        if (messageContent) {
+            stompClient.send('/app/send', {}, JSON.stringify({sender: 'anon', message: messageContent}));
+            inputField.value = ""; // Clear input after sending
+        } else {
+            console.log("Cannot send an empty message");
+        }
+        onst
     }
 </script>
 

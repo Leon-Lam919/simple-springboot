@@ -1,3 +1,4 @@
+// This file is used to accept the request of a name from the client side
 package com.example.simple_springboot;
 
 public class hello {

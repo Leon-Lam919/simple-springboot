@@ -1,3 +1,6 @@
+// converts the incoming request from the hello class into a Greeting response and returns for the
+// client to accept
+
 package com.example.simple_springboot;
 
 import org.springframework.messaging.handler.annotation.MessageMapping;

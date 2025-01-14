@@ -1,3 +1,4 @@
+// This file is used to return the response to the client from the server side
 package com.example.simple_springboot;
 
 public class Greeting {

@@ -7,11 +7,11 @@ import org.springframework.web.util.HtmlUtils;
 
 @Controller
 public class GlobalChatController {
-	@SendTo("/topic/global")
 	@MessageMapping("/send")
+	@SendTo("/topic/global")
 
-	public Global_chat broadcastMsgGlobal(Global_chat msg) {
-		return new Global_chat(HtmlUtils.htmlEscape(msg.getSender()),
-				HtmlUtils.htmlEscape(msg.getSender()));
+	public Global_chat broadcastMsgGlobal(chat user) {
+		return new Global_chat("Hello: " + HtmlUtils.htmlEscape(user.getUser()),
+				HtmlUtils.htmlEscape(user.getMsg()));
 	}
 }

@@ -1,3 +1,5 @@
+// Used as a response from the server side to client side
+
 package com.example.simple_springboot;
 
 public class Global_chat {
@@ -11,19 +13,19 @@ public class Global_chat {
 		this.message = message;
 	}
 
-	String getSender() {
+	public String getSender() {
 		return sender;
 	}
 
-	String getMessage() {
+	public String getMessage() {
 		return message;
 	}
 
-	void setSender(String sender) {
+	public void setSender(String sender) {
 		this.sender = sender;
 	}
 
-	void setMessage(String message){
+	public void setMessage(String message) {
 		this.message = message;
 	}
 }

@@ -51,9 +51,9 @@ file structure:
     - ex: "home" maps to the "home" page of the website and etc...
 
 # File information
-- hello.java --> request model that takes in the values from the client side
-- Greeting.java --> response model, returns a formatted message from the server side to the client side
-- GreetingController.java --> Listens for messages sent to the /hello endpoint, processes the information to return to client, then it is sent to the /topic/greeting endpoint where the client is subscribed to recieve the message
+- hello.java, chat.java --> request model that takes in the values from the client side
+- Greeting.java, Global_chat.java --> response model, returns a formatted message from the server side to the client side
+- GreetingController.java, GlobalChatController.java --> Listens for messages sent to the /hello endpoint, processes the information to return to client, then it is sent to the /topic/greeting endpoint where the client is subscribed to recieve the message
 
 #Creating simple chat backend
 1. add dependencies

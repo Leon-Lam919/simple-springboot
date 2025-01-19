@@ -15,11 +15,11 @@
 
 <input type="text" id="global" name="global">
 <button onclick="sendGlobalMsg()">Send msg to gen</button>
-<div id="global" style="border: 2px solid black; padding: 10px; margin: 10px;"></div>
+<div id="globalMessages" style="border: 2px solid black; padding: 10px; margin: 10px;"></div>
 
 <!-- TODO: add global chat messaging feat-->
 <script>
-    var socket = new SockJS('/ws');
+    var socket = new SockJS('http://localhost:9012/ws');
     var stompClient = Stomp.over(socket);
 
     stompClient.connect({}, function (frame) {
@@ -34,11 +34,11 @@
 
         // subscribe to global messaging
         stompClient.subscribe('/topic/global', function (global) {
-            console.log("Raw message: ", message);
+            console.log("Raw message: ", global);
             const body = JSON.parse(global.body);
-            const globalDiv = document.getElementById('global');
-            console.log("Message received: ", body.content);
-            globalDiv.innerHTML += `<p style="padding: 3px; margin: 5px;">Message received: ${body.content}</p>`;
+            const globalDiv = document.getElementById('globalMessages');
+            console.log("Message received: ", body.message);
+            globalDiv.innerHTML += `<p style="padding: 3px; margin: 5px;">Message received: ${body.message}</p>`;
 
         });
     });
@@ -61,7 +61,7 @@
         const messageContent = inputField.value.trim(); // Get input value and trim spaces
 
         if (messageContent) {
-            stompClient.send('/app/send', {}, JSON.stringify({user: "test", msg: messageContent}));
+            stompClient.send('/app/send', {}, JSON.stringify({user: "test_user_1", msg: messageContent}));
             inputField.value = ""; // Clear input after sending
         } else {
             console.log("Cannot send an empty message");

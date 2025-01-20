@@ -17,7 +17,6 @@
 <button onclick="sendGlobalMsg()">Send msg to gen</button>
 <div id="globalMessages" style="border: 2px solid black; padding: 10px; margin: 10px;"></div>
 
-<!-- TODO: add global chat messaging feat-->
 <script>
     var socket = new SockJS('http://localhost:9012/ws');
     var stompClient = Stomp.over(socket);
@@ -55,7 +54,6 @@
         }
     }
 
-    <!-- FIX: Msg sends, but there is no return from backend-->
     function sendGlobalMsg() {
         const inputField = document.getElementById('global');
         const messageContent = inputField.value.trim(); // Get input value and trim spaces

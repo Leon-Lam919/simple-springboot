@@ -10,7 +10,6 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 
-// TODO: adjust http request to handle what endpoints we have
 // TODO: Create user/ password
 @Configuration
 @EnableWebSecurity
@@ -18,8 +17,9 @@ public class WebSecurityConfig {
 
 	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-		http.authorizeHttpRequests((requests) -> requests.requestMatchers("/", "/home")
-				.permitAll().anyRequest().authenticated())
+		http.authorizeHttpRequests(
+				(requests) -> requests.requestMatchers("/", "/home", "/ws/**")
+						.permitAll().anyRequest().authenticated())
 				.formLogin((form) -> form.loginPage("/login").permitAll())
 				.logout((logout) -> logout.permitAll());
 

@@ -36,8 +36,8 @@
             console.log("Raw message: ", global);
             const body = JSON.parse(global.body);
             const globalDiv = document.getElementById('globalMessages');
-            console.log("Message received: ", body.message);
-            globalDiv.innerHTML += `<p style="padding: 3px; margin: 5px;">Message received: ${body.message}</p>`;
+            console.log("Message received: ", body.sender);
+            globalDiv.innerHTML += `<p style="padding: 3px; margin: 5px;">Message received: ${body.sender}</p>`;
 
         });
     });

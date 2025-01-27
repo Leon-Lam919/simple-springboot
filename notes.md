@@ -69,6 +69,8 @@ MVP:
     [ ] Create username/ password authentication for any new users trying to enter
     [ ] Create MYSql DB to store passwords/ usernames
 [ x ] Add username to every msg sent (client side, ask for username)
-[ ] 
-[ ]
-[ ]
+
+#1/26
+- Login created & mapped to correct static page
+- TODO: 
+    [ ] fix logout not working for static page

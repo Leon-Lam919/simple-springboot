@@ -81,4 +81,10 @@ MVP:
         - need to find out how to remap the index.html to the login page?
     - [ ] implement users making their own names/ passwords
 
+# 1/28
+- I think the issue might have to do with the way the MVCconfig is allowing to view the files, but after making changes to add/ remove home or index it still does not logout correctly.
 
+# 1/29
+- [ ] look into Thymeleaf
+- [ ] figure out the logout feat not working
+- [ ] look into adding user registration

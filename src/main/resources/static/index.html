@@ -8,14 +8,20 @@
     <script src="https://cdn.jsdelivr.net/npm/stompjs/lib/stomp.min.js"></script>
 </head>
 
-<h1>WebSocket Test</h1>
-<input type="text" id="fname" name="fname">
-<button onclick="sendMessage()">Send Message</button>
-<div id="messages" style="border: 2px solid black; padding: 10px; margin: 10px;"></div>
+<body>
+    <h1>WebSocket Test</h1>
+    <input type="text" id="fname" name="fname">
+    <button onclick="sendMessage()">Send Message</button>
+    <div id="messages" style="border: 2px solid black; padding: 10px; margin: 10px;"></div>
 
-<input type="text" id="global" name="global">
-<button onclick="sendGlobalMsg()">Send msg to gen</button>
-<div id="globalMessages" style="border: 2px solid black; padding: 10px; margin: 10px;"></div>
+    <input type="text" id="global" name="global">
+    <button onclick="sendGlobalMsg()">Send msg to gen</button>
+    <div id="globalMessages" style="border: 2px solid black; padding: 10px; margin: 10px;"></div>
+
+    <form th:action="@{/logout}" method="post">
+        <input type="submit" value="Sign Out" />
+    </form>
+</body>
 
 <script>
     var socket = new SockJS('http://localhost:9012/ws');

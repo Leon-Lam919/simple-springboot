@@ -54,7 +54,7 @@ file structure:
 MVP:
 - Have a working backend
     - Create each endpoint for the frontend to connect to:
-       - [ x ] General chat (broadcast messages to everyone in the room) --> GenChat branch
+       - [x] General chat (broadcast messages to everyone in the room) --> GenChat branch
         - Private messages (DMs to people, one on one)
         - Group chats
             - select members to join and start chatting
@@ -68,7 +68,7 @@ MVP:
 -  [ ] Create private messages endpoint in the server side
    -  [ ] Create username/ password authentication for any new users trying to enter
     - [ ] Create MYSql DB to store passwords/ usernames
-- [ x ] Add username to every msg sent (client side, ask for username)
+- [x] Add username to every msg sent (client side, ask for username)
 
 #1/26
 - Login created & mapped to correct static page
@@ -76,3 +76,9 @@ MVP:
   - [ ] fix logout not working for static page
 
 #1/27
+- TODO: 
+    - [ ] fix logout not working for static page
+        - need to find out how to remap the index.html to the login page?
+    - [ ] implement users making their own names/ passwords
+
+

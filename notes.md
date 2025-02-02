@@ -66,9 +66,10 @@ MVP:
 
 # TODO
 -  [ ] Create private messages endpoint in the server side
-   -  [ ] Create username/ password authentication for any new users trying to enter
-    - [ ] Create MYSql DB to store passwords/ usernames
+    -   [ ] Create username/ password authentication for any new users trying to enter
+    -   [ ] Create MYSql DB to store passwords/ usernames
 - [x] Add username to every msg sent (client side, ask for username)
+- [x] figure out the logout feat not working
 
 #1/26
 - Login created & mapped to correct static page
@@ -85,6 +86,15 @@ MVP:
 - I think the issue might have to do with the way the MVCconfig is allowing to view the files, but after making changes to add/ remove home or index it still does not logout correctly.
 
 # 1/29
-- [ ] look into Thymeleaf
-- [ ] figure out the logout feat not working
+- [x] look into Thymeleaf
+- [x] figure out the logout feat not working
 - [ ] look into adding user registration
+
+# 1/31
+- index file just needed to be moved to template folder for logout to map correctly due to using Thymeleaf
+
+# 2/1
+- [ ] look into adding user registration
+- [x] create register page
+- need to link it to the login page
+- [ ] create DB that will hold user/ password information (salted)

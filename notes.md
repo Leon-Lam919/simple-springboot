@@ -98,3 +98,8 @@ MVP:
 - [x] create register page
 - need to link it to the login page
 - [ ] create DB that will hold user/ password information (salted)
+
+# 2/3
+- [ ] create DB that will hold user/ password information (salted)
+    - figure out the schema, then implement
+- [ ] need to create docker images to then be ready to setup DB

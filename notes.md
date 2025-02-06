@@ -74,11 +74,10 @@ MVP:
 #1/26
 - Login created & mapped to correct static page
 - TODO: 
-  - [ ] fix logout not working for static page
+  - [x] fix logout not working for static page
 
 #1/27
 - TODO: 
-    - [ ] fix logout not working for static page
         - need to find out how to remap the index.html to the login page?
     - [ ] implement users making their own names/ passwords
 
@@ -102,4 +101,9 @@ MVP:
 # 2/3
 - [ ] create DB that will hold user/ password information (salted)
     - figure out the schema, then implement
-- [ ] need to create docker images to then be ready to setup DB
+- [x] need to create docker images to then be ready to setup DB
+
+# 2/5
+- docker works, finally
+- DB is setup, tables will need to be created
+- use command 'docker-compose down -v && docker-compose up --build -d' to rebuild the docker container

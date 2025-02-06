@@ -1,0 +1,36 @@
+# Ignore MySQL data directory
+mysql-data/
+data/
+
+# Ignore environment files with secrets
+.env
+.env.local
+*.secret
+
+# Ignore compiled Java classes and build artifacts
+build/
+*.jar
+*.war
+*.ear
+
+# Ignore IDE/editor config files
+*.iml
+.idea/
+.vscode/
+.project
+.classpath
+.settings/
+
+# Ignore logs and temp files
+*.log
+*.out
+*.pid
+hs_err_pid*
+*.swp
+*.swo
+.DS_Store
+
+# Ignore dependencies that will be fetched in the container
+.m2/
+.gradle/
+.cache/

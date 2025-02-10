@@ -107,3 +107,8 @@ MVP:
 - docker works, finally
 - DB is setup, tables will need to be created
 - use command 'docker-compose down -v && docker-compose up --build -d' to rebuild the docker container
+
+# 2/9
+- for accessing DB, use `docker-compose exec db mysql -u root -p`
+- Created User table
+    - need to create table for password/ any other necessary tables, CREATE SCHEMAAAAAAAAAAAAAAAAA!!!!!!!!!!!!!!!!!

@@ -117,3 +117,6 @@ MVP:
 - added email col to db
 - created entity model file called `user.java`
 - created repo file to connect data layer into project
+
+# 2/12
+- added register page, not showing up on login with button to register and route to that page?

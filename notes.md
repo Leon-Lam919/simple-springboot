@@ -112,3 +112,8 @@ MVP:
 - for accessing DB, use `docker-compose exec db mysql -u root -p`
 - Created User table
     - need to create table for password/ any other necessary tables, CREATE SCHEMAAAAAAAAAAAAAAAAA!!!!!!!!!!!!!!!!!
+
+# 2/11
+- added email col to db
+- created entity model file called `user.java`
+- created repo file to connect data layer into project

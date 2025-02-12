@@ -12,6 +12,9 @@ public class user {
 	@Column(name = "id")
 	private Integer id;
 
+	@Column(name = "email")
+	private String email;
+
 	@Column(name = "username")
 	private String user;
 
@@ -32,6 +35,14 @@ public class user {
 
 	public Integer getId() {
 		return id;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getEmail() {
+		return email;
 	}
 
 	public void setUser(String user) {

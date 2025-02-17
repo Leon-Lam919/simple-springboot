@@ -70,6 +70,7 @@ MVP:
     -   [ ] Create MYSql DB to store passwords/ usernames
 - [x] Add username to every msg sent (client side, ask for username)
 - [x] figure out the logout feat not working
+- [ ] create user implementation file and add all necessary functions
 
 #1/26
 - Login created & mapped to correct static page
@@ -120,3 +121,7 @@ MVP:
 
 # 2/12
 - added register page, not showing up on login with button to register and route to that page?
+
+# 2/17
+- fixed docker not updating and fixed login html page
+- created a userServices interface that will need to be implemneted with another file

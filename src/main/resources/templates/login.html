@@ -13,12 +13,12 @@
 	<div th:if="${param.logout}">
 		You have been logged out.
 	</div>
-	<div style="display: flex; justify-content: center; align-items: center; height: 100vh;>
+	<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
 		<form style=" margin: auto; display: block; width: 50%;" th:action="@{/login}" method="post">
-		<div><label> User Name : <input type="text" name="username" /> </label></div>
-		<div><label> Password: <input type="password" name="password" /> </label></div>
-		<div><input type="submit" value="Sign In" /></div>
-		<div> <a href="register.html"> Register</a></div>
+			<div><label> User Name : <input type="text" name="username" /> </label></div>
+			<div><label> Password: <input type="password" name="password" /> </label></div>
+			<div><input type="submit" value="Sign In" /></div>
+			<div> <a th:href="@{/register}"> Register</a></div>
 		</form>
 	</div>
 	<p>test test test </p>

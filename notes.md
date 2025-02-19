@@ -125,3 +125,7 @@ MVP:
 # 2/17
 - fixed docker not updating and fixed login html page
 - created a userServices interface that will need to be implemneted with another file
+
+# 2/18
+- worked on UserServicesImpl (still WIP)
+- need to fix routing when running locally.

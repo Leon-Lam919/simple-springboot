@@ -21,7 +21,7 @@ public class WebSecurityConfig {
 				.requestMatchers("/index", "/", "/login", "/register", "/ws/**")
 				.permitAll().anyRequest().authenticated())
 				.formLogin((form) -> form.loginPage("/login")
-						.defaultSuccessUrl("/home", true).permitAll())
+						.defaultSuccessUrl("/index.html", true).permitAll())
 				.logout((logout) -> logout.logoutUrl("/logout")
 						.logoutSuccessUrl("/login?logout").permitAll());
 		return http.build();

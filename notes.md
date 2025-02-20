@@ -129,3 +129,6 @@ MVP:
 # 2/18
 - worked on UserServicesImpl (still WIP)
 - need to fix routing when running locally.
+
+# 2/19
+- implemented UserServicesImpl, will need to test to assure it works

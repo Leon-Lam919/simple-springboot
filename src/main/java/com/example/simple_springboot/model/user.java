@@ -6,7 +6,8 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "User") // SQL table name
 
-public class user {
+public class User {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
@@ -18,11 +19,19 @@ public class user {
 	@Column(name = "username")
 	private String user;
 
-	@Column(name = "psssword")
+	@Column(name = "password")
 	private String password;
 
 	@Column(name = "created_at")
 	private LocalDateTime createdAt;
+
+	public User() {}
+
+	public User(String user, String password, String email) {
+		this.user = user;
+		this.password = password;
+		this.email = email;
+	}
 
 	@PrePersist
 	protected void onCreate() {

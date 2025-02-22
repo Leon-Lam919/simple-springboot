@@ -132,3 +132,7 @@ MVP:
 
 # 2/19
 - implemented UserServicesImpl, will need to test to assure it works
+ 
+# 2/20
+- implemented all layers on the backend side for user
+- created Thymeleaf template for register

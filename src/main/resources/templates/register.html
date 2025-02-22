@@ -6,14 +6,20 @@
 </head>
 
 <body>
+	<h1> Creating new user</h1>
 	<div th:if="${param.error}">
 		Invalid username and password.
 	</div>
-	<form th:action="@{/login}" method="post">
-		<div><label> Email : <input type="text" name="email" /> </label></div>
-		<div><label> User Name : <input type="text" name="username" /> </label></div>
-		<div><label> Password: <input type="password" name="password" /> </label></div>
-		<div><input type="submit" value="Register" /></div>
+	<form th:action="@{/users}" th.object="${User}" method="post">
+		<label for="Email">Email: </label>
+		<input type="text" id="Email" th:field="*{email}" /> <br />
+
+		<label for="Username">Username: </label>
+		<input type="text" id="Username" th:field="*{username}" /> <br />
+
+		<label for="password">password: </label>
+		<input type="text" id="password" th:field="*{password}" /> <br />
+		<button type="submit"> Submit </button>
 	</form>
 </body>
 

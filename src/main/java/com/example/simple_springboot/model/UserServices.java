@@ -1,14 +1,14 @@
 package com.example.simple_springboot.model;
 
 import java.util.List;
-import com.example.simple_springboot.model.user;
+import com.example.simple_springboot.model.User;
 
 public interface UserServices {
-	List<user> getAllUsers();
+	List<User> getAllUsers();
 
-	void save(user User);
+	void save(User User);
 
-	user getById(Integer id);
+	User getById(Integer id);
 
 	void deleteViaId(Integer id);
 
